@@ -60,8 +60,10 @@ public class ProductController {
     }
 
     @DeleteMapping("/products/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteProduct(@PathVariable Integer id){
-        productService.deleteProduct(id);
 
+        productService.deleteProduct(id);
     }
+
 }
